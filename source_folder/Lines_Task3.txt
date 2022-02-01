@@ -1,9 +1,0 @@
-In Java create
-a Collection that
-contains at
-least five String
-objects.
-Then create
-a method that write
-each String object from
-collection into a textfile.

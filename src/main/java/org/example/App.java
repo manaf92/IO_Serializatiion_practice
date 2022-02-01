@@ -7,13 +7,9 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static org.example.IO_Manager.readFileGetCollectionOfLines;
-import static org.example.IO_Manager.readFileGetString;
 import static org.example.UserInput.typeEToExit;
 
 /**
@@ -68,10 +64,11 @@ public class App
                     break;
 
                 /**
-
+                 4. Create a method that can copy a file using both BufferedInputStream and
+                 BufferedOutputStream.
                  */
                 case 4:
-                    task4();
+                    IO_Manager.copyAFile("source_folder/Lines_Task3.txt","source_folder/destination_task4.txt");
                     break;
 
                 /**

@@ -2,6 +2,7 @@ package org.example;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -37,15 +38,30 @@ public class IO_Manager {
             for (String line : lines) {
                 writer.write(line);
                 writer.newLine();
+                writer.flush();
             }
             System.out.println("the objects was added to the file, successfully. Reload to chek the file ");
         }catch (IOException ex){
             ex.printStackTrace();
         }
-
     }
 
+    public static void copyAFile(String sourcePath, String destinationPath){
+        try(
+                BufferedInputStream in = new BufferedInputStream(new FileInputStream(sourcePath));
+                BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(destinationPath))
+        ){
+            byte[] buffer = new byte[1024];
+            int bytesRead ;
+            while((bytesRead = in.read(buffer)) > 0){
+                out.write(buffer,0, bytesRead);
+                out.flush();
+            }
+            System.out.println("the file:'"+sourcePath +"' was copied to this new file:'"+ destinationPath+"'" );
 
+        } catch (IOException exception){
+            exception.printStackTrace();
+        }
 
-
+    }
 }
