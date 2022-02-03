@@ -1,0 +1,21 @@
+[ {
+  "id" : 1,
+  "name" : "Johan",
+  "birthdate" : [ 1992, 3, 1 ]
+}, {
+  "id" : 2,
+  "name" : "Mikael",
+  "birthdate" : [ 1999, 10, 14 ]
+}, {
+  "id" : 3,
+  "name" : "Anders",
+  "birthdate" : [ 2016, 1, 22 ]
+}, {
+  "id" : 4,
+  "name" : "Johan",
+  "birthdate" : [ 1988, 5, 22 ]
+}, {
+  "id" : 5,
+  "name" : "Lars",
+  "birthdate" : [ 1970, 11, 14 ]
+} ]

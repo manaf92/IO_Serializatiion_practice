@@ -6,25 +6,23 @@ public  class UserInput {
 
     static int getNumber(){
         int number=0;
-        boolean correctInput = false;
-        do{
+        while (true){
             try {
                 number = Integer.parseInt(getString());
-                correctInput = true;
+                return number;
             } catch (Exception e) {
                 System.out.println("Invalid number, Try again");
             }
-        }while (!correctInput);
-        return number;
+        }
     }
 
-    static int getCheckedNumber(){
-        System.out.println("Enter an exercise number between 1 to 6 ");
+    static int getNumberBetween(int min, int max){
+        System.out.println("Enter an exercise number between"+ min+ "and"+ max);
         int number;
         while (true) {
             number = getNumber();
-            if (number < 1 || number > 6)
-                System.out.println("Out of the range. Try again between 1 to 6 ");
+            if (number < min || number > max)
+                System.out.println("Out of the range. Try again between"+ min+ "and"+ max);
             else  return number;
         }
     }
